@@ -95,43 +95,50 @@ form.addEventListener("submit", e => {
 
     let city = form.city.value;
 
-    updateCity(city)
-        .then(data => {
+    if (city) {
 
-            console.log(data);
+        updateCity(city)
+            .then(data => {
 
-            topCity.innerHTML = data.cityDetails.EnglishName;
-            topCountry.innerHTML = data.cityDetails.Country.EnglishName;
-            icon.src = `img/icons/${data.weather.WeatherIcon}.svg`;
-            deg.innerHTML = `${data.weather.Temperature.Metric.Value}&deg`;
-            condition.innerHTML = data.weather.WeatherText;
-            ppplace.innerHTML = `${data.cityDetails.EnglishName}, ${data.cityDetails.Country.EnglishName}`;
+                topCity.innerHTML = data.cityDetails.EnglishName;
+                topCountry.innerHTML = data.cityDetails.Country.EnglishName;
+                icon.src = `img/icons/${data.weather.WeatherIcon}.svg`;
+                deg.innerHTML = `${data.weather.Temperature.Metric.Value}&degC`;
+                condition.innerHTML = data.weather.WeatherText;
+                ppplace.innerHTML = `${data.cityDetails.EnglishName}, ${data.cityDetails.Country.EnglishName}`;
 
-            if (data.weather.IsDayTime) {
+                console.log(data.cityDetails.EnglishName.length);
 
-                background.style.backgroundImage = `url("img/day.png")`;
-                document.body.style.color = "#000";
-                document.querySelector(".tools").style.backgroundColor = "transparent";
-                document.querySelector(".tools .title").style.color = "#000";
+                if (data.weather.IsDayTime) {
 
-            } else {
+                    background.style.backgroundImage = `url("img/day.png")`;
+                    document.body.style.color = "#000";
+                    document.querySelector(".tools").style.backgroundColor = "transparent";
+                    document.querySelector(".tools .title").style.color = "#000";
 
-                background.style.backgroundImage = `url("img/night.png")`;
-                document.body.style.color = "#fff";
-                document.querySelector(".tools").style.backgroundColor = "#fff";
-                document.querySelector(".tools").style.borderTopLeftRadius = "10px";
-                document.querySelector(".tools").style.borderTopRightRadius = "10px";
-                document.querySelector(".tools .title").style.color = "#000";
+                } else {
 
-            }
+                    background.style.backgroundImage = `url("img/night.png")`;
+                    document.body.style.color = "#fff";
+                    document.querySelector(".tools").style.backgroundColor = "#fff";
+                    document.querySelector(".tools").style.borderTopLeftRadius = "10px";
+                    document.querySelector(".tools").style.borderTopRightRadius = "10px";
+                    document.querySelector(".tools .title").style.color = "#000";
 
-        })
-        .catch(err => console.error(err));
+                }
 
-    newCity.className = "update-city";
-    e.target.reset();
+            })
+            .catch(err => console.error(err));
 
-    hamburger.src = "img/hamburger.png";
+        newCity.className = "update-city";
+        e.target.reset();
+        hamburger.src = "img/hamburger.png";
+
+    } else {
+
+        newCity.className = "update-city show";
+
+    }
 
 });
 
@@ -144,51 +151,54 @@ const small = document.querySelector(".small"),
     large2 = document.querySelector(".large2"),
     circle2 = document.querySelector(".circle2");
 
+const changeFSize = (par1, par2, par3, par4, par5) => {
+
+    topCity.style.fontSize = par1;
+    topCountry.style.fontSize = par2;
+    deg.style.fontSize = par3;
+    condition.style.fontSize = par4;
+    ppplace.style.fontSize = par5;
+
+};
+
 small.addEventListener("click", () => {
 
     circle.style.marginLeft = "32px";
-    topCity.style.fontSize = "24px";
-    topCountry.style.fontSize = "16px";
-    deg.style.fontSize = "3.5em";
-    condition.style.fontSize = "1.2em";
-    ppplace.style.fontSize = "1.2em";
+    changeFSize("24px", "16px", "3.5em", "1.2em", "1.2em");
 
 });
 
 medium.addEventListener("click", () => {
 
     circle.style.marginLeft = "133px";
-    topCity.style.fontSize = "30px";
-    topCountry.style.fontSize = "20px";
-    deg.style.fontSize = "4em";
-    condition.style.fontSize = "1.5em";
-    ppplace.style.fontSize = "1.5em";
+    changeFSize("30px", "20px", "4em", "1.5em", "1.5em");
 
 });
 
 large.addEventListener("click", () => {
 
     circle.style.marginLeft = "233px";
-    topCity.style.fontSize = "40px";
-    topCountry.style.fontSize = "30px";
-    deg.style.fontSize = "4.5em";
-    condition.style.fontSize = "2em";
-    ppplace.style.fontSize = "2em";
+    changeFSize("40px", "30px", "4.5em", "2em", "2em");
 
 });
+
+const changeISize = (par1, par2) => {
+
+    icon.style.transform = `scale(${par1})`;
+    icon.style.animationName = par2;
+
+};
 
 small2.addEventListener("click", () => {
 
     circle2.style.marginLeft = "74px";
-    icon.style.transform = "scale(1.8)";
-    icon.style.animationName = "animate-icon";
+    changeISize(1.8, "animate-icon");
 
 });
 
 large2.addEventListener("click", () => {
 
     circle2.style.marginLeft = "191px";
-    icon.style.transform = "scale(2.7)";
-    icon.style.animationName = "animate-icon2";
+    changeISize(2.7, "animate-icon2");
 
 });

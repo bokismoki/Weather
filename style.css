@@ -29,10 +29,8 @@ body {
 
 .app .update-city {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.93);
   z-index: 999;
   border-radius: 10px;
@@ -80,6 +78,7 @@ body {
   border: 1px solid gray;
   text-transform: uppercase;
   padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 .app .settings {
@@ -258,6 +257,7 @@ body {
   cursor: pointer;
   display: inline;
   text-transform: uppercase;
+  z-index: 100;
 }
 
 .app .place .country {
