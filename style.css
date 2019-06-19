@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background-color: #888;
+}
+
+.app {
+  width: 450px;
+  height: 850px;
+  margin: auto;
+  background-image: url("img/day.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.app .update-city {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.93);
+  z-index: 999;
+  border-radius: 10px;
+  display: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.app .update-city .content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.app .update-city .content .enter {
+  margin: 2em 0;
+}
+
+.app .update-city .content .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .update-city .content .city {
+  border: 1px solid gray;
+  padding: 0.5em 1em;
+  width: 100%;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+.app .update-city .content .submit-btn {
+  border: 1px solid gray;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+}
+
+.app .settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.93);
+  z-index: 999;
+  border-radius: 10px;
+  display: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.app .settings .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.app .settings .content .change-font {
+  margin-top: 50px;
+}
+
+.app .settings .content .change-icon {
+  margin-top: 20px;
+}
+
+.app .settings .content .outer {
+  margin: 0 auto;
+  background-color: red;
+  width: 300px;
+  height: 70px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .settings .content .sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+.app .settings .content .sizes .s {
+  cursor: pointer;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.app .settings .content .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 32px;
+  margin-top: 20px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  position: absolute;
+}
+
+.app .settings .content .outer2 {
+  margin: 0 auto;
+  background-color: red;
+  width: 300px;
+  height: 70px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .settings .content .sizes2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+}
+
+.app .settings .content .sizes2 .s {
+  cursor: pointer;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.app .settings .content .circle2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 74px;
+  margin-top: 20px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  position: absolute;
+}
+
+.app .show {
+  display: block;
+}
+
+.app .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.app .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.app .tools .title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.app .tools .hamburger,
+.app .tools .cog {
+  cursor: pointer;
+  z-index: 999;
+}
+
+.app .tools .cog {
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.app .place {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.app .place .city,
+.app .place .country {
+  cursor: pointer;
+  display: inline;
+  text-transform: uppercase;
+}
+
+.app .place .country {
+  font-weight: 600;
+}
+
+.app .weather-icon {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.app .weather-icon .icon {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  position: relative;
+  -webkit-animation-name: animate-icon;
+          animation-name: animate-icon;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animate-icon {
+  0% {
+    top: -8px;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  50% {
+    top: 8px;
+    -webkit-transform: scale(1.9);
+            transform: scale(1.9);
+  }
+  100% {
+    top: -8px;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+}
+
+@keyframes animate-icon {
+  0% {
+    top: -8px;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  50% {
+    top: 8px;
+    -webkit-transform: scale(1.9);
+            transform: scale(1.9);
+  }
+  100% {
+    top: -8px;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+}
+
+@-webkit-keyframes animate-icon2 {
+  0% {
+    top: -8px;
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+  50% {
+    top: 8px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  100% {
+    top: -8px;
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+}
+
+@keyframes animate-icon2 {
+  0% {
+    top: -8px;
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+  50% {
+    top: 8px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  100% {
+    top: -8px;
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+}
+
+.app .temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .temperature .current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .temperature .current .deg {
+  font-size: 4em;
+}
+
+.app .temperature .current .condition {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.app .temperature .current .place {
+  font-size: 1.5em;
+  padding: 0;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

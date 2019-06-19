@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="update-city">
+            <div class="content">
+                <h1 class="enter">Enter a city</h1>
+                <form class="form">
+                    <input type="text" placeholder="Enter a city..." name="city" class="city">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="content">
+                <h1 class="change">Appearance Settings</h1>
+                <h3 class="change-font">Font Size</h3>
+                <div class="outer">
+                    <div class="sizes">
+                        <div class="s small">S</div>
+                        <div class="s medium">M</div>
+                        <div class="s large">L</div>
+                    </div>
+                    <div class="circle"></div>
+                </div>
+                <h3 class="change-icon">Icon Size</h3>
+                <div class="outer2">
+                    <div class="sizes2">
+                        <div class="s small2">S</div>
+                        <div class="s large2">L</div>
+                    </div>
+                    <div class="circle2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools">
+            <img src="img/hamburger.png" class="hamburger">
+            <h1 class="title">Weather App</h1>
+            <img src="img/cog.png" class="cog">
+        </div>
+        <div class="place">
+            <h2 class="city">Paris</h2>
+            <h4 class="country">France</h4>
+        </div>
+        <div class="weather-icon">
+            <img src="img/icons/1.svg" class="icon">
+        </div>
+        <div class="temperature">
+            <div class="current">
+                <h1 class="deg">32&deg;</h1>
+                <h4 class="condition">Sunny</h4>
+                <h4 class="place">Paris, France</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
