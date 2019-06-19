@@ -135,10 +135,10 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: white;
+  color: #fff;
 }
 
-.app .settings .content .sizes .s {
+.app .settings .content .s {
   cursor: pointer;
   height: 70px;
   padding: 0 20px;
@@ -148,7 +148,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  background-color: #fff;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -181,20 +181,14 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  color: white;
-}
-
-.app .settings .content .sizes2 .s {
-  cursor: pointer;
-  height: 70px;
-  padding: 0 20px;
+  color: #fff;
 }
 
 .app .settings .content .circle2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  background-color: #fff;
   width: 35px;
   height: 35px;
   border-radius: 50%;

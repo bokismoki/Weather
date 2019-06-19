@@ -8,6 +8,7 @@ const deg = document.querySelector(".temperature .deg");
 const condition = document.querySelector(".temperature .condition");
 const ppplace = document.querySelector(".temperature .place");
 const icon = document.querySelector(".weather-icon .icon");
+const background = document.querySelector(".app");
 
 topCity.addEventListener("click", () => {
 
@@ -99,19 +100,12 @@ form.addEventListener("submit", e => {
 
             console.log(data);
 
-            let cityName = document.querySelector(".place .city");
-            cityName.innerHTML = data.cityDetails.EnglishName;
-            let countryName = document.querySelector(".place .country");
-            countryName.innerHTML = data.cityDetails.Country.EnglishName;
-            let weatherIcon = document.querySelector(".weather-icon .icon");
-            weatherIcon.src = `img/icons/${data.weather.WeatherIcon}.svg`;
-            let deg = document.querySelector(".temperature .deg");
+            topCity.innerHTML = data.cityDetails.EnglishName;
+            topCountry.innerHTML = data.cityDetails.Country.EnglishName;
+            icon.src = `img/icons/${data.weather.WeatherIcon}.svg`;
             deg.innerHTML = `${data.weather.Temperature.Metric.Value}&deg`;
-            let condition = document.querySelector(".temperature .condition");
             condition.innerHTML = data.weather.WeatherText;
-            let tempPlace = document.querySelector(".temperature .place");
-            tempPlace.innerHTML = `${data.cityDetails.EnglishName}, ${data.cityDetails.Country.EnglishName}`;
-            let background = document.querySelector(".app");
+            ppplace.innerHTML = `${data.cityDetails.EnglishName}, ${data.cityDetails.Country.EnglishName}`;
 
             if (data.weather.IsDayTime) {
 

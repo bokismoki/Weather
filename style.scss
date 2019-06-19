@@ -112,18 +112,18 @@ body {
       .sizes {
         display: flex;
         justify-content: space-around;
-        color: white;
+        color: #fff;
+      }
 
-        .s {
-          cursor: pointer;
-          height: 70px;
-          padding: 0 20px;
-        }
+      .s {
+        cursor: pointer;
+        height: 70px;
+        padding: 0 20px;
       }
 
       .circle {
         display: flex;
-        background-color: white;
+        background-color: #fff;
         width: 35px;
         height: 35px;
         border-radius: 50%;
@@ -146,18 +146,12 @@ body {
       .sizes2 {
         display: flex;
         justify-content: space-evenly;
-        color: white;
-
-        .s {
-          cursor: pointer;
-          height: 70px;
-          padding: 0 20px;
-        }
+        color: #fff;
       }
 
       .circle2 {
         display: flex;
-        background-color: white;
+        background-color: #fff;
         width: 35px;
         height: 35px;
         border-radius: 50%;
