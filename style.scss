@@ -43,7 +43,7 @@ body {
       text-align: center;
 
       .enter {
-        margin: 2em 0;
+        margin-bottom: 50px;
       }
 
       .form {
@@ -61,10 +61,20 @@ body {
       }
 
       .submit-btn {
-        border: 1px solid gray;
+        border: none;
         text-transform: uppercase;
-        padding: 0.5em 1em;
+        padding: 1em 2.3em;
         cursor: pointer;
+        background-color: #256399;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: background-color 250ms;
+
+        &:hover {
+          background-color: lighten(#256399, 10%);
+        }
       }
     }
   }

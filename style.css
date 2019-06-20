@@ -50,7 +50,7 @@ body {
 }
 
 .app .update-city .content .enter {
-  margin: 2em 0;
+  margin-bottom: 50px;
 }
 
 .app .update-city .content .form {
@@ -75,10 +75,22 @@ body {
 }
 
 .app .update-city .content .submit-btn {
-  border: 1px solid gray;
+  border: none;
   text-transform: uppercase;
-  padding: 0.5em 1em;
+  padding: 1em 2.3em;
   cursor: pointer;
+  background-color: #256399;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
+.app .update-city .content .submit-btn:hover {
+  background-color: #2f7ec2;
 }
 
 .app .settings {
