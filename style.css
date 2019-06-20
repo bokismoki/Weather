@@ -115,9 +115,9 @@ body {
 
 .app .settings .content .outer {
   margin: 0 auto;
-  background-color: red;
+  background-color: #256399;
   width: 300px;
-  height: 70px;
+  height: 50px;
   border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,6 +126,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .app .settings .content .sizes {
@@ -141,6 +143,7 @@ body {
   cursor: pointer;
   height: 70px;
   padding: 0 20px;
+  font-weight: bold;
 }
 
 .app .settings .content .circle {
@@ -148,10 +151,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin-left: 32px;
+  margin-left: 36px;
   margin-top: 20px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
@@ -160,9 +163,9 @@ body {
 
 .app .settings .content .outer2 {
   margin: 0 auto;
-  background-color: red;
+  background-color: #256399;
   width: 300px;
-  height: 70px;
+  height: 50px;
   border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,6 +174,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .app .settings .content .sizes2 {
@@ -188,14 +193,23 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin-left: 74px;
+  margin-left: 79px;
   margin-top: 20px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
   position: absolute;
+}
+
+.app .settings .content .show-hide-icon {
+  margin-top: 70px;
+}
+
+.app .settings .content i {
+  color: #256399;
+  cursor: pointer;
 }
 
 .app .show {

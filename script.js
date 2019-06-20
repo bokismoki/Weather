@@ -163,21 +163,21 @@ const changeFSize = (par1, par2, par3, par4, par5) => {
 
 small.addEventListener("click", () => {
 
-    circle.style.marginLeft = "32px";
+    circle.style.marginLeft = "36px";
     changeFSize("24px", "16px", "3.5em", "1.2em", "1.2em");
 
 });
 
 medium.addEventListener("click", () => {
 
-    circle.style.marginLeft = "133px";
+    circle.style.marginLeft = "138px";
     changeFSize("30px", "20px", "4em", "1.5em", "1.5em");
 
 });
 
 large.addEventListener("click", () => {
 
-    circle.style.marginLeft = "233px";
+    circle.style.marginLeft = "239px";
     changeFSize("40px", "30px", "4.5em", "2em", "2em");
 
 });
@@ -191,14 +191,32 @@ const changeISize = (par1, par2) => {
 
 small2.addEventListener("click", () => {
 
-    circle2.style.marginLeft = "74px";
+    circle2.style.marginLeft = "79px";
     changeISize(1.8, "animate-icon");
 
 });
 
 large2.addEventListener("click", () => {
 
-    circle2.style.marginLeft = "191px";
+    circle2.style.marginLeft = "196px";
     changeISize(2.7, "animate-icon2");
+
+});
+
+const toggleIcon = document.querySelector(".toggle-icon");
+
+toggleIcon.addEventListener("click", () => {
+
+    if(toggleIcon.className === "fas fa-toggle-on fa-3x toggle-icon") {
+
+        icon.style.display = "none";
+        toggleIcon.className = "fas fa-toggle-off fa-3x toggle-icon";
+
+    } else if (toggleIcon.className === "fas fa-toggle-off fa-3x toggle-icon") {
+
+        icon.style.display = "block";
+        toggleIcon.className = "fas fa-toggle-on fa-3x toggle-icon";
+
+    }
 
 });
