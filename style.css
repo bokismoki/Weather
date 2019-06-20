@@ -27,6 +27,19 @@ body {
   border-radius: 10px;
 }
 
+.app .globe {
+  background-color: transparent;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  top: 34%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+}
+
 .app .update-city {
   position: absolute;
   width: 100%;

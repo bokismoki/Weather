@@ -9,6 +9,7 @@ const condition = document.querySelector(".temperature .condition");
 const ppplace = document.querySelector(".temperature .place");
 const icon = document.querySelector(".weather-icon .icon");
 const background = document.querySelector(".app");
+const globe = document.querySelector(".globe");
 
 topCity.addEventListener("click", () => {
 
@@ -52,6 +53,12 @@ cog.addEventListener("click", () => {
 
 });
 
+globe.addEventListener("click", () => {
+
+    newCity.classList.add("show");
+    hamburger.src = "img/back.png";
+
+});
 
 
 const key = "D3P03enScVUGcBN5An01q9M7coRiAV2q";
