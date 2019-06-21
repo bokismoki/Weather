@@ -65,8 +65,7 @@ const key = "D3P03enScVUGcBN5An01q9M7coRiAV2q";
 
 const getCity = async city => {
 
-    const response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${key}
-    &q=${city}`);
+    const response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${key}&q=${city}`);
     const data = await response.json();
 
     return data[0];
@@ -113,8 +112,6 @@ form.addEventListener("submit", e => {
                 deg.innerHTML = `${data.weather.Temperature.Metric.Value}&degC`;
                 condition.innerHTML = data.weather.WeatherText;
                 ppplace.innerHTML = `${data.cityDetails.EnglishName}, ${data.cityDetails.Country.EnglishName}`;
-
-                console.log(data.cityDetails.EnglishName.length);
 
                 if (data.weather.IsDayTime) {
 
